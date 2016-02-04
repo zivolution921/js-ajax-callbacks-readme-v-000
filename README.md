@@ -1,22 +1,24 @@
 # Ajax and Callbacks
+
 ## Objectives
 - Explain what an API is and why it's used
 - Explain what Ajax is and why it's used
 - Make a get request using Ajax to append text to a page
 - Explain what a callback is and why Ajax runs asynchronously
 
-## Intro (half done)
+## Intro
 
 So far, you've been using a gem to access a web API.  Gems are responsible for handling all of the nitty-gritty.  They allow us to easily access/modify the data that's important to us. But what happens if the API we want to use doesn't have an associated gem?  We will need to handle everything ourselves.  If that's the case, we better learn more about what an API really is!
 
-## API Basics (done)
+## API Basics 
 
 We interact with web APIs through a set of urls. Each url defines a resource that we access.  The benefit of using a gem is that we don't have to build these urls ourselves.  The gems wrap the necessary code into neat little packages.  When we ask a gem for data, a gem will make a request to the API, handle the response and parse the data into a format we can use. Instead of relying on the magic of gems let's get our hands dirty.
 
-### Postman and the GitHub API (done)
+### Postman and the GitHub API 
+
 Let's see what's actually happening when a gem makes a request to an API. Ok, but how do we do this without a gem? We could write some ruby code, but let's try using a tool called Postman. Postman is an easy to use Chrome extension that lets us make different web requests.  It easily allows us to interact with web APIs. For our exercise, we are going to work with the GitHub API to retrieve information about the Ruby on Rails GitHub repository. To get started we need to setup Postman.
 
-#### Postman Installation (almost done)
+#### Postman Installation
 
 1. Visit https://www.getpostman.com and install the Chrome extension.
 2. Once you have it installed, open Postman from the Chrome Apps menu.
@@ -158,6 +160,7 @@ $.get(url)
 Note: The callback that gets passed into `.done`  gets `data` as an argument.  `data` represents the response returned from the API. jQuery handles passing in that `data` object to the callbacks.  This is essential to our fire and forget technique.  We don't have to sit around and wait for the API to give us a response.  Instead, we tell jQuery that when it receives a response to please pass it along to our callbacks so they can handle it accordingly.
 
 ##Resources
+
 * https://en.wikipedia.org/wiki/Application_programming_interface
 * https://api.jquery.com/jquery.get/
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-ajax-callbacks-readme' title='Ajax and Callbacks'>Ajax and Callbacks</a> on Learn.co and start learning to code for free.</p>
